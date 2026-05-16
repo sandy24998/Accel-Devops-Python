@@ -1,0 +1,30 @@
+# Application Settings
+app:
+  name: "DevOps Python Utility"
+  environment: "development"  # Options: development, staging, production
+  debug: true
+
+# Server Configuration
+server:
+  host: "127.0.0.1"
+  port: 8080
+  timeout: 30
+
+# Database Connection
+database:
+  engine: "postgresql"
+  host: "localhost"
+  port: 5432
+  name: "app_db"
+  user: "postgres"
+
+# Feature Flags
+features:
+  enable_logging: true
+  enable_alerts: false
+
+# Supported Formats
+allowed_extensions:
+  - ".json"
+  - ".yaml"
+  - ".csv"

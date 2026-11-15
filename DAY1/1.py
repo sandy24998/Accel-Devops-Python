@@ -324,3 +324,19 @@ if cpu < 80 and memory < 80 and disk < 80 and service_status == "running":
     print("Server is ready for deployment")
 else:
     print("Server is not ready for deployment")  
+
+
+# Loops (for, while)
+
+servers = ["web01", "web02", "db01", "app01"]
+
+for server in servers:
+    print(f"Checking {server}")    
+
+for i in range(1, 6):
+    print(i)
+
+servers = ["web01", "web02", "db01"]
+
+for index, server in enumerate(servers, start=1):
+    print(index, server)

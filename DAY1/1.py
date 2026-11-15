@@ -301,3 +301,26 @@ ec2_instance = {
 print(ec2_instance["InstanceId"])
 print(ec2_instance["State"]["Name"])
 print(ec2_instance["Tags"]["Environment"])
+
+# Conditional statements (if, elif, else)
+
+cpu_usage = 85
+
+if cpu_usage > 90:
+    print("Critical CPU alert")
+
+elif cpu_usage > 75:
+    print("Warning: High CPU usage")
+
+else:
+    print("CPU utilization is normal")
+
+cpu = 45
+memory = 60
+disk = 70
+service_status = "running"
+
+if cpu < 80 and memory < 80 and disk < 80 and service_status == "running":
+    print("Server is ready for deployment")
+else:
+    print("Server is not ready for deployment")  

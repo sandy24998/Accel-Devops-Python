@@ -156,3 +156,32 @@ print(name[:5])
 print(name[2:])
 print(name[-5:])
 print(name[::2])
+
+
+#Lists and list methods
+
+services = ["nginx", "docker", "jenkins", "kubernetes"]
+
+print(services)
+print(services[0])
+print(services[-1])
+
+services.append("terraform")
+services.insert(1, "prometheus")
+services.remove("docker")
+services.pop()
+print(services)
+
+
+numbers = [40, 10, 30, 20]
+
+numbers.sort()
+print(numbers)
+
+numbers.reverse()
+print(numbers)
+
+print(len(numbers))
+print(max(numbers))
+print(min(numbers))
+print(sum(numbers))

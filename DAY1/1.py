@@ -234,3 +234,70 @@ print(production_ports.union(development_ports))
 
 # Elements only in production
 print(production_ports.difference(development_ports))
+
+
+
+# Dictionaries and dictionary methods
+
+server = {
+    "name": "web-server-01",
+    "ip": "10.0.1.10",
+    "status": "running",
+    "cpu": 75
+}
+
+print(server)
+print(server["name"])
+print(server["ip"])
+print(server["status"])
+
+# Accessing values safely:
+print(server.get("name"))
+
+print(server.get("memory", 0))
+
+# Adding and updating values:
+server["memory"] = 65
+server["status"] = "stopped"
+server.update({"environment": "production"})
+print(server)
+
+# Removing values:
+server.pop("cpu")
+del server["ip"]
+print(server)
+
+# dictionary methods:
+print(server.keys())
+print(server.values())
+print(server.items())
+
+
+# Looping through dictionaries:
+
+server = {
+    "name": "web01",
+    "environment": "production",
+    "status": "running"
+}
+
+for key, value in server.items():
+    print(f"{key}: {value}")
+
+# Nested dictionaries:
+
+ec2_instance = {
+    "InstanceId": "i-123456789",
+    "InstanceType": "t3.medium",
+    "State": {
+        "Name": "running"
+    },
+    "Tags": {
+        "Environment": "production",
+        "Owner": "DevOps"
+    }
+}
+
+print(ec2_instance["InstanceId"])
+print(ec2_instance["State"]["Name"])
+print(ec2_instance["Tags"]["Environment"])

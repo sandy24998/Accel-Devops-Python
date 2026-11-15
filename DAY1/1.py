@@ -136,3 +136,12 @@ print(server.startswith("production"))
 print(server.endswith("ec2"))
 print(server.find("ec2"))
 print(server.split("-"))
+
+# String formatting using f-strings:
+
+server = "web-server-01"
+cpu_usage = 85
+
+print(f"Server: {server}")
+print(f"CPU utilization: {cpu_usage}%")
+print(f"ALERT: {server} CPU utilization is {cpu_usage}%")

@@ -185,3 +185,27 @@ print(len(numbers))
 print(max(numbers))
 print(min(numbers))
 print(sum(numbers))
+
+
+#Tuples and tuple operations
+
+aws_regions = ("ap-south-1", "us-east-1", "eu-west-1")
+
+print(aws_regions[0])
+print(aws_regions[1])
+print(len(aws_regions))
+
+# Tuple operations:
+regions = ("ap-south-1", "us-east-1", "ap-south-1")
+
+print(regions.count("ap-south-1"))
+print(regions.index("us-east-1"))
+
+#Tuple unpacking:
+server = ("web01", "10.0.1.10", "running")
+
+name, ip, status = server
+
+print(name)
+print(ip)
+print(status)

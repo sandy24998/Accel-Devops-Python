@@ -145,3 +145,14 @@ cpu_usage = 85
 print(f"Server: {server}")
 print(f"CPU utilization: {cpu_usage}%")
 print(f"ALERT: {server} CPU utilization is {cpu_usage}%")
+
+
+#String slicing:
+
+name = "sandeep"
+
+print(name[0:5])
+print(name[:5])
+print(name[2:])
+print(name[-5:])
+print(name[::2])

@@ -209,3 +209,28 @@ name, ip, status = server
 print(name)
 print(ip)
 print(status)
+
+
+# Sets and set operations
+
+ports = {22, 80, 443, 8080, 80}
+print(ports)
+
+ports.add(3306)
+ports.remove(22)
+ports.discard(9999)
+print(ports)
+
+# Set operations:
+
+production_ports = {22, 80, 443, 8080}
+development_ports = {22, 3000, 8080}
+
+# Common elements
+print(production_ports.intersection(development_ports))
+
+# All unique elements
+print(production_ports.union(development_ports))
+
+# Elements only in production
+print(production_ports.difference(development_ports))

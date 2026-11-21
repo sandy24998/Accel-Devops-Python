@@ -340,3 +340,4 @@ servers = ["web01", "web02", "db01"]
 
 for index, server in enumerate(servers, start=1):
     print(index, server)
+

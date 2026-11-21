@@ -22,7 +22,7 @@ while not service_ready and attempts < max_attempts:
     if attempts == 3:
         service_ready = True
     else:
-        time.sleep(1)
+        time.sleep(0.1)
 
 print("Database connected!" if service_ready else "Timed out waiting for DB.")
 
@@ -46,3 +46,30 @@ if environment == "production":
     pass
 else:
     print("Non-production environment")
+
+#Functions
+def demo(name:str) -> str:
+    return f"hello {name}"
+msg=demo("Sandeep")
+print(msg)
+
+
+#Function Arguments
+#Postional Arguments
+def demo(name:str, age:int) -> str:
+    return f"hello {name}, my age is {age}"
+msg=demo("Sandeep", 28)  # Order matters here
+msg=demo(28, "sandeep")  # Order matters here
+print(msg)
+
+#keywords Arguments
+def demo(name:str, age:int) -> str:
+    return f"hello {name}, my age is {age}"
+msg=demo(age=28,name="Sandeep") # Order does'nt matters here
+print(msg)
+
+#Default Arguments
+def demo(name:str, age:int=20) -> str:  # Here Default Passed if no age passed in function call
+    return f"hello {name}, my age is {age}"
+msg=demo(name="Sandeep") # Order does'nt matters here
+print(msg)
